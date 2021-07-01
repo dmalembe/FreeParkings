@@ -1,0 +1,6 @@
+<div class="content">
+<mat-card *ngFor="let parking of parkings" class="parking-cards">
+   <span>{{parking.name}}</span>
+   <span style="float: right;" [ngStyle]="CalculStyleStatut(parking)">{{parking.statut}}</span>
+</mat-card>
+</div>

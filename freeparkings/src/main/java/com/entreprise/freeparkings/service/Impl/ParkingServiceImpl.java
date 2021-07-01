@@ -33,11 +33,26 @@ public class ParkingServiceImpl implements ParkingService {
 			parking.setNbplacesDispo(r.getFields().getGrp_disponible());
 			parking.setNbplacesTotal(r.getFields().getGrp_exploitation());
 			parking.setHoraire_ouverture(r.getFields().getGrp_horodatage());
-			parking.setStatut(r.getFields().getGrp_statut());
+			parking.setStatut(getLibelleStatut(r));
 			
 			result.add(parking);
 		}
 		
 		return result;
+	}
+	
+	private String getLibelleStatut(RecordEntity r) {
+		switch (r.getFields().getGrp_statut()) {
+			case "1":{
+				return "FERME";
+			}
+			case "2":{
+				return "ABONNES";
+			}
+			case "5":{
+				return "OUVERT";
+			}
 		}
+		return "Données non disponible";
+	}
 }
