@@ -11,8 +11,8 @@ public class Parking {
 	
 	private Integer id;
 	private String name;
-	private int NbplacesDispo;
-	private int NbplacesTotal;
+	private Integer NbplacesDispo;
+	private Integer NbplacesTotal;
 	private String Statut;
 	private String Horaire_ouverture;
 
