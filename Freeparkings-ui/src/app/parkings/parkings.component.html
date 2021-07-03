@@ -1,5 +1,5 @@
 <div class="content">
-<mat-card *ngFor="let parking of parkings" class="parking-cards">
+<mat-card *ngFor="let parking of parkings" class="parking-cards" [routerLink]="['/parking', parking.id]" >
    <span>{{parking.name}}</span>
    <span style="float: right;" [ngStyle]="CalculStyleStatut(parking)">{{parking.statut}}</span>
 </mat-card>

@@ -6,7 +6,7 @@ export interface ParkingInfo{
     NbplacesDispo: number;
     NbplacesTotal: number;
     statut: String;
-    Horaire_ouverture: String;
+    Horaire_ouverture: String; 
 
 }
 
