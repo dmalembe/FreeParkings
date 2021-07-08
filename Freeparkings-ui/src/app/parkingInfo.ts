@@ -3,10 +3,10 @@ export interface ParkingInfo{
 
     id: number;
     name: String;
-    NbplacesDispo: number;
-    NbplacesTotal: number;
+    nbplacesDispo: number;
+    nbplacesTotal: number;
     statut: String;
-    Horaire_ouverture: String; 
+    horaire_ouverture: String; 
 
 }
 
